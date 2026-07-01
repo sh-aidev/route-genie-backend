@@ -1,5 +1,11 @@
+from dotenv import load_dotenv
+load_dotenv()
+
+from src.app import App
+
+
 def main():
-    print("Hello from route-genie-backend!")
+    App().run()
 
 
 if __name__ == "__main__":

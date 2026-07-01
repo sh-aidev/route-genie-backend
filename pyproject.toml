@@ -1,9 +1,22 @@
 [project]
 name = "route-genie-backend"
 version = "0.1.0"
-description = "Add your description here"
+description = "AI-powered travel itinerary generator backend"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "fastapi>=0.138.0",
+    "fastapi[standard]>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "pydantic-settings>=2.6.0",
+    "openai>=1.54.0",
+    "httpx>=0.28.0",
+    "python-dotenv>=1.0.0",
+    "loguru>=0.7.2",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
